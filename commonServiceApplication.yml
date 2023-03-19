@@ -1,0 +1,9 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    instanceId: ${spring.application.name}        # Only this is enough to change the name of registered microservice using spring.application.name: (which is in .yml)
+    prefer-ip-address: true
